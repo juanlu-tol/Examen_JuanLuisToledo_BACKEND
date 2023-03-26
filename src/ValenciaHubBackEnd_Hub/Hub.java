@@ -5,6 +5,11 @@ public class Hub {
 
     private contenedor[][] hubC;
 
+    public contenedor[][] getHubC() {
+        return hubC;
+    }
+
+
     //CONSTRUCTOR
     public Hub(){
         this.hubC=new contenedor[10][12]; //10 FILAS 12 COLUMNAS
@@ -23,6 +28,10 @@ public class Hub {
         s += "\n";
 
         return s;
+    }
+
+    public void setContenedor(contenedor C, int i, int j){
+        hubC[i][j]=C;
     }
 
     /*

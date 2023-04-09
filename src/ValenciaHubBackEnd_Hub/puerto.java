@@ -1,25 +1,26 @@
 package ValenciaHubBackEnd_Hub;
 
+import java.util.Arrays;
+
 public class puerto  {
     private Hub[] P;
 
 
     // CONSTRUCTORES
     public puerto(){
+
         P = new Hub[3];
+        for (int i = 0; i < P.length; i++) {
+            Hub aux = new Hub();
+            P[i]=aux;
+        }
+
     }
 
     // OTROS MÉTODOS
 
     public boolean Ocupado (int hub){
-        for (int i = 0; i < 12; i++) {
-            for (int j = 0; j < 10; j++) {
-                if(P[hub].getHubC()[i][j]==null){
-                    return false;
-                }
-            }
-        }
-        return true;
+        return P[hub].Ocupado();
     }
 
     /*LA SIGUIENTE FUNCIÓN DEVUELVE:
@@ -28,30 +29,27 @@ public class puerto  {
      */
     public boolean apilarContenedor (contenedor C, int hub){
         if (Ocupado(hub)==true){
-            return false;
+            return false; //HUB LLENO
         }
-        else{
-            for (int i = 0; i < 12; i++) {
-                for (int j = 0; j < 10; j++) {
-                    if(P[hub].getHubC()[i][j]==null){
-                        P[hub].setContenedor(C, i, j);
-                    }
-                }
-            }
-            return true;
-        }
+        else return P[hub].apilarConPrioridad(C);
+
 
     }
 
-    public void desapilar (int hub, int idCont){
-        for (int i = 0; i < 12; i++) {
-            for (int j = 0; j < 10; j++) {
-                if(P[hub].getHubC()[i][j].getId()==idCont){
-                    P[hub].setContenedor(null, i, j);
-                }
-            }
+    public void desapilar (int hub, int col){
+        P[hub].desapilar(col);
 
-        }
     }
 
+    public String toString(int hub) {
+     return P[hub].toString();
+    }
+
+    public contenedor datosAPartirDeId(int hub, int id){
+        return P[hub].datosAPartirdeID(id);
+    }
+
+    public int contadorPaises(int hub, String país){
+        return P[hub].contadorPaises(país);
+    }
 }

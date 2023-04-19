@@ -1,7 +1,7 @@
 package ValenciaHubBackEnd_Hub;
 import java.util.Objects;
-
-public class Hub {
+import java.io.Serializable;
+public class Hub implements Serializable{
 
     private contenedor[][] hubC;
 

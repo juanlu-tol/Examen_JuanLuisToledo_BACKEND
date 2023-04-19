@@ -1,8 +1,9 @@
 package ValenciaHubBackEnd_Hub;
+import java.io.Serializable;
 
 import java.util.Arrays;
 
-public class puerto  {
+public class puerto implements Serializable{
     private Hub[] P;
 
 

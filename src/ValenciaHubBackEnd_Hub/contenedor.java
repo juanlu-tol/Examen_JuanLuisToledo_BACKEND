@@ -1,5 +1,6 @@
 package ValenciaHubBackEnd_Hub;
-public class contenedor {
+import java.io.Serializable;
+public class contenedor implements Serializable{
     private final int id;
     private int peso, prioridad;
     private String pais,contenido,emisor,receptor;

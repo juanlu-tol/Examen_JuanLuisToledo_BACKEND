@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ValenciaHub_BackEnd:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ValenciaHub_BackEnd_jar</output-path>
+    <root id="archive" name="ValenciaHub_BackEnd.jar">
+      <element id="module-output" name="ValenciaHub_BackEnd" />
+    </root>
+  </artifact>
+</component>

@@ -1,3 +1,4 @@
+// Juan Luis Toledo Gómez
 package ValenciaHubBackEnd_Hub;
 import java.util.Objects;
 import java.io.Serializable;
@@ -97,6 +98,20 @@ public class Hub implements Serializable{
 
         }
         return contador; //DEVUELVE EL CONTADOR
+    }
+
+    public String contenedoreselegibles(int peso){
+        String s = "";
+        for (int i = 0; i <hubC.length ; i++) {
+            for (int j = 0; j <hubC[0].length ; j++) {
+                if (hubC[i][j] != null && hubC[i][j].getPeso()>=peso){
+                    hubC[i][j].setAduanas(true);
+                    s = "Id Contenedor:" + hubC[i][j].getId() + "Empresa: " + hubC[i][j].getEmisor() + "\n" + " Peso: " + hubC[i][j].getPeso() + "\n" + " Inspeccionado en aduanas: " + hubC[i][j].isAduanas();
+                }
+            }
+        }
+        return s;
+
     }
 }
 

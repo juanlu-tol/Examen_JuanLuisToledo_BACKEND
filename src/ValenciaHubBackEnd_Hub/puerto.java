@@ -1,3 +1,4 @@
+// Juan Luis Toledo Gómez
 package ValenciaHubBackEnd_Hub;
 import java.io.Serializable;
 
@@ -52,5 +53,9 @@ public class puerto implements Serializable{
 
     public int contadorPaises(int hub, String país){
         return P[hub].contadorPaises(país);
+    }
+
+    public String contenedoreselegibles(int numhub, int peso){
+        return P[numhub].contenedoreselegibles(peso);
     }
 }

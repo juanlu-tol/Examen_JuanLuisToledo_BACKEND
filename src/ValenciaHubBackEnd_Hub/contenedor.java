@@ -1,3 +1,4 @@
+// Juan Luis Toledo Gómez
 package ValenciaHubBackEnd_Hub;
 import java.io.Serializable;
 public class contenedor implements Serializable{
